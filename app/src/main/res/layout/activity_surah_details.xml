@@ -8,24 +8,27 @@
 
     <ListView
         android:id="@+id/listViewSurahVerses"
-        android:layout_width="408dp"
-        android:layout_height="566dp"
+        android:layout_width="376dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAyat"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.753" />
 
     <EditText
         android:id="@+id/editTextAyat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Ayat number"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,11 +37,12 @@
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="42dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="10dp"
         android:text=""
         app:icon="@android:drawable/ic_search_category_default"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toEndOf="@+id/editTextAyat"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,8 +50,10 @@
         android:id="@+id/SurahName"
         android:layout_width="83dp"
         android:layout_height="33dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/searchAyat"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/searchAyat"
         app:layout_constraintTop_toBottomOf="@+id/searchAyat" />
 
