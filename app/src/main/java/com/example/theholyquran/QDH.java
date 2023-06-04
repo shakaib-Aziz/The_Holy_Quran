@@ -571,6 +571,10 @@ public class QDH {
         return list;
     }
 
+    public String getSurahName(int index)
+    {
+        return urduSurahNames[index];
+    }
     public String getSurahStart(int surahNumber) {
 
         return Integer.toString(SSP[--surahNumber]);

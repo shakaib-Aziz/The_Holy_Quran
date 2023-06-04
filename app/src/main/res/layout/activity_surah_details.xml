@@ -4,43 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity_SurahDetails">
 
     <ListView
-        android:id="@+id/listViewMain"
-        android:layout_width="411dp"
-        android:layout_height="561dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="408dp"
+        android:layout_height="566dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMain"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAyat"
+        app:layout_constraintVertical_bias="0.704" />
 
     <EditText
-        android:id="@+id/editTextMain"
+        android:id="@+id/editTextAyat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Surah Number"
+        android:hint="Ayat number"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/searchMain"
+        android:id="@+id/searchAyat"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="42dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text=""
         app:icon="@android:drawable/ic_search_category_default"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
-        app:layout_constraintStart_toEndOf="@+id/editTextMain"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toEndOf="@+id/editTextAyat"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/SurahNum"
+        android:layout_width="83dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/searchAyat"
+        app:layout_constraintStart_toStartOf="@+id/searchAyat"
+        app:layout_constraintTop_toBottomOf="@+id/searchAyat" />
 </androidx.constraintlayout.widget.ConstraintLayout>
