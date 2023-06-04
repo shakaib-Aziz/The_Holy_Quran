@@ -560,8 +560,9 @@ public class QDH {
             " النَّاس"
     };
 
-    public String getSurahVerses(int surahNumber) {
-        return Integer.toString(surahAyatCount[surahNumber]);
+
+    public int getSurahVersesCount(int surahNumber) {
+        return surahAyatCount[surahNumber];
     }
 
     public ArrayList<String> getSurahNames() {
@@ -575,9 +576,9 @@ public class QDH {
     {
         return urduSurahNames[index];
     }
-    public String getSurahStart(int surahNumber) {
+    public int getSurahStart(int surahNumber) {
 
-        return Integer.toString(SSP[--surahNumber]);
+        return SSP[surahNumber];
     }
 
     public int getParahStart(int parahNumber) {

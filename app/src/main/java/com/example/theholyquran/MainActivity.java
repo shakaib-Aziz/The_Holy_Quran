@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (surahNum>0 && surahNum<=114)
                 {
-                    listView.setSelection(--surahNum);
+                    listView.setSelection(++surahNum);
                 }
                 else{
                     Toast.makeText(MainActivity.this, "Surah number is Invalid!", Toast.LENGTH_SHORT).show();

@@ -7,6 +7,7 @@
     tools:context=".activity_SurahDetails">
 
     <ListView
+        android:id="@+id/listViewSurahVerses"
         android:layout_width="408dp"
         android:layout_height="566dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,11 +43,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/SurahNum"
+        android:id="@+id/SurahName"
         android:layout_width="83dp"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/searchAyat"
         app:layout_constraintStart_toStartOf="@+id/searchAyat"
         app:layout_constraintTop_toBottomOf="@+id/searchAyat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
