@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         editText=findViewById(R.id.editTextMain);
         search=findViewById(R.id.searchMain);
 
-        //MainActivity main=new MainActivity();
         ArrayList<String> arrayList=Quran.getSurahNames();
 
         listView = findViewById(R.id.listViewMain);
