@@ -54,14 +54,15 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int surahNum=Integer.parseInt(editText.getText().toString());
+                String surah=editText.getText().toString();
+                if (!surah.isEmpty()) {
+                    int surahNum = Integer.parseInt(surah);
 
-                if (surahNum>0 && surahNum<=114)
-                {
-                    listView.setSelection(++surahNum);
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "Surah number is Invalid!", Toast.LENGTH_SHORT).show();
+                    if (surahNum > 0 && surahNum <= 114) {
+                        listView.setSelection(++surahNum);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Surah number is Invalid!", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });

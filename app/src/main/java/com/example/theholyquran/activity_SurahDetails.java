@@ -59,18 +59,18 @@ public class activity_SurahDetails extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int verseNum=Integer.parseInt(editText.getText().toString());
-                arrayList.clear();
+                String verse = editText.getText().toString();
+                if (!verse.isEmpty()) {
+                    int verseNum = Integer.parseInt(verse);
+                    arrayList.clear();
 
-                if (verseNum>0 && verseNum<= Quran.getSurahVersesCount(SurahNum))
-                {
-                    arrayList=ArabicText.GetVerse(Quran.getSurahStart(SurahNum)+verseNum-1);      //Because array index starts from 0 but user understands it as starting from 1
+                    if (verseNum > 0 && verseNum <= Quran.getSurahVersesCount(SurahNum)) {
+                        arrayList = ArabicText.GetVerse(Quran.getSurahStart(SurahNum) + verseNum - 1);      //Because array index starts from 0 but user understands it as starting from 1
+                    } else {
+                        Toast.makeText(activity_SurahDetails.this, "Ayat number is Invalid!", Toast.LENGTH_SHORT).show();
+                    }
+                    updateListView();
                 }
-                else
-                {
-                    Toast.makeText(activity_SurahDetails.this, "Ayat number is Invalid!", Toast.LENGTH_SHORT).show();
-                }
-                updateListView();
             }
         });
     }
